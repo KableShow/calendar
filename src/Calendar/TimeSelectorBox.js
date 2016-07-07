@@ -13,6 +13,7 @@ class TimeSelectorBox extends React.Component {
 
 	render(){
 		let time = this.props.time;
+		console.log('run');
 		let h = parseInt(time.getHours()/10)>0?time.getHours():"0"+time.getHours();
 		let m = parseInt(time.getMinutes()/10)>0?time.getMinutes():"0"+time.getMinutes();
 		let s = parseInt(time.getSeconds()/10)>0?time.getSeconds():"0"+time.getSeconds();
