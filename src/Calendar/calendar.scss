@@ -1,0 +1,350 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+ol, ul, li {
+	list-style: none;
+}
+
+.dateSBox {
+	width: 100%;
+	height: auto;
+	border: 1px solid #00A1CB;
+	text-align: center;
+	position: relative;
+}
+
+.dateRBox {
+	width: 100%;
+	height: 20px;
+	font: normal bold 20px/20px Georgia;
+	text-align: center;
+}
+
+.dateYBox, .dateMBox {
+	width: 50%;
+	background: #00A1CB;
+	height: 40px;
+	display: inline-block;
+	line-height: 40px;
+	float: left;
+
+	&>span {
+		text-align: center;
+		color: #fff;
+		display: block;
+		float: left;
+		width: 70%;
+		height: 40px;
+
+		&:hover {
+			cursor: pointer;
+			color: #000;
+		}
+
+		&::after {
+			content: " ";
+			display: inline-block;
+			border: 5px solid transparent;
+			border-top: 5px solid #fff;
+			margin: 0 0 -2px 3px;
+		}
+	}
+}
+
+.clearfix {
+	clear: both;
+}
+
+.clearfix:after {
+	content: " ";
+	display: block;
+	clear: both;
+}
+
+.arrow {
+	display: block;
+	width: 15%;
+	height: 40px;
+	float: left;
+	overflow: hidden;
+}
+
+.leftArrow {
+	&::before {
+		content: " ";
+		display: block;
+		border: 7px solid transparent;
+		border-right: 7px solid #fff;
+		margin: 12px 0 0 0;
+	}
+}
+
+.rightArrow {
+	&::before {
+		content: " ";
+		display: block;
+		border: 7px solid transparent;
+		border-left: 7px solid #fff;
+		margin: 12px 0 0 0;
+	}
+}
+
+.dateDBox {
+	background: #f5f5f5;
+	border-bottom: 1px solid #ccc;
+}
+
+.dateDBox>li, .dateABox>li {
+	display: block;
+	width: (100%/7);
+	float: left;
+	height: 30px;
+	line-height: 30px;
+	cursor: pointer;
+}
+
+.dateABox>li:hover {
+	background: #ECF4FB;
+}
+
+.focusDate {
+	color: #fff;
+	background: #00A1CB;
+}
+
+.dateTBox {
+	border-top: 1px solid #ccc;
+	width: 50%;
+	float: left;
+	background: #f5f5f5; 
+
+	&>div {
+		width: 80%;
+		height: 26px;
+		background: #fff;
+		margin: 3px auto; 
+		border: 1px solid #ccc;
+		line-height: 26px;
+		overflow: hidden;
+
+		&>span {
+			font-size: 20px;
+		}
+	}
+}
+
+.btnGroup {
+	width: 50%;
+	float: left;
+	height: 34px;
+	background: #f5f5f5;
+	border-top: 1px solid #ccc;
+
+	&>div {
+		display: inline-block;
+		width: 31%;
+		height: 26px;
+		color: #fff;
+		line-height: 26px;
+		border-radius: 8px;
+		overflow: hidden;
+		background: #00A1CB;
+		margin: 3px 2% 0 0;
+		position: relative;
+		top: 0px;
+		cursor: pointer;
+		font-size: 12px;
+
+		&:hover {
+			color: #000;
+			top: 2px;
+		}
+	}
+}
+
+.yearSBox {
+	position: absolute;
+	top: 60px;
+	z-index: 100;
+	width: 100%;
+	background: #fff;
+
+	&>ul {
+		width: 100%;
+		display: block;
+	
+		&>li {
+			display: block;
+			width: (100%/3);
+			height: 40px;
+			line-height: 40px;
+			float: left;
+
+			&:hover {
+				cursor: pointer;
+				background: #ECF4FB; 
+			}
+		}
+	}
+
+	&>div {
+		width: 31%;
+		background: #00A1CB;
+		border-radius: 5px;
+		color: #fff;
+		margin: 10px 2% 10px 0;	
+		float: left;
+		height: 26px;
+		line-height: 26px;
+		position: relative;
+		top: 0px;
+		
+		&:hover {
+			cursor: pointer;
+			top: 2px;
+			color: #000;
+		}
+
+		&:first-of-type {
+			margin-left: 1%;
+		}
+	}
+}
+
+.monthSBox {
+	position: absolute;
+	top: 60px;
+	z-index: 100;
+	background: #fff;
+	width: 100%;
+
+	&>ul {
+		width: 100%;
+		display: block;
+
+		&>li {
+			display: block;
+			width: (100%/3);
+			height: 50px;
+			line-height: 50px;
+			float: left;
+
+			&:hover {
+				cursor: pointer;
+				background: #ECF4FB;
+			}
+		}
+	}
+
+	&>div {
+		float: right;
+		width: 25%;
+		height: 26px;
+		background: #00A1CB;
+		border-radius: 5px;
+		position: relative;
+		top: 0px;
+		margin: 10px 2% 10px 0; 
+		color: #fff;
+
+		&:hover {
+			cursor: pointer;
+			color: #000;
+			top: 2px;
+		}
+
+		&:before {
+			content: " ";
+			display: block;
+			clear: both;
+		}
+	}
+}
+
+.timeSBox {
+	position: absolute;
+	top: 20px;
+	width: 100%;
+	z-index: 100;
+	
+	&>div {
+		width: 100%;
+		height: 30px;
+		border-bottom: 1px solid #ccc;
+		background: #f5f5f5;
+		line-height: 30px;
+		margin-top: 40px;
+		
+		&>span {
+			display: block;
+			float: right;
+			width: 30px;
+			height: 30px;
+			font-size: 30px;
+
+			&:hover {
+				cursor: pointer;
+				color: #00A1CB;
+			}
+		}
+	}
+
+	&>ul {
+		width: 100%;
+		background: #fff;
+
+		&>li {
+			width: 30%;
+			display: block;
+			float: left;
+			margin-left: 2.5%;
+
+			&>span {
+				width: 100%;
+				height: 30px;
+				line-height: 30px;
+				display: block;
+			}
+
+			&>div {
+				width: 80%;
+				margin: 0 auto;
+				border: 1px solid #ccc;
+				height: 142px;
+				margin-bottom: 6px;
+				overflow-y: auto;
+
+				&::-webkit-scrollbar {
+					height: 6px;
+					width: 6px;
+					margin-right: 5px;
+					background: #f5f5f5;
+					transition: all 0.3s ease-in-out;
+					border-radius: 0px;
+				}
+
+				&::-webkit-scrollbar-thumb {
+					background: rgba(0,0,0,0.5);
+				}
+
+				&>p {
+					height: 28px;
+					line-height: 28px;
+
+					&:hover {
+						cursor: pointer;
+						background: #ECF4FB;
+					}
+				}
+			}
+		}
+
+		&::after {
+			content: " ";
+			display: block;
+			clear: both;
+		}
+	}
+}
