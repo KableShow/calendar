@@ -1,12 +1,13 @@
 {
   "name": "calendar",
   "version": "1.0.0",
-  "description": "",
+  "description": "React Component",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
-  "author": "",
+  "author": "kable",
   "license": "ISC",
   "devDependencies": {
     "babel-core": "^6.10.4",
@@ -26,5 +27,13 @@
   "dependencies": {
     "react": "^15.2.0",
     "react-dom": "^15.2.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KableShow/calendar.git"
+  },
+  "bugs": {
+    "url": "https://github.com/KableShow/calendar/issues"
+  },
+  "homepage": "https://github.com/KableShow/calendar#readme"
 }
