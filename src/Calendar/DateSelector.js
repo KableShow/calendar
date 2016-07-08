@@ -112,7 +112,10 @@ class DateSelector extends React.Component {
 					time={this.state.time}
 					showT={this.showT.bind(this)}	
 				/>
-				<ButtonGroup />
+				<ButtonGroup 
+					setTime={this.setTime.bind(this)} 
+					time={this.state.time}	
+				/>
 				<YearSelectorBox 
 					time={this.state.time} 
 					isShow={this.state.showY}
