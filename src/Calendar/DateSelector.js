@@ -83,11 +83,13 @@ class DateSelector extends React.Component {
 	}
 
 	render(){
-
+		let isShowTime = this.props.needTime;
+		let dateTimeBox = isShowTime?(<DateTimeBox time={this.state.time} showT={this.showT.bind(this)} />):null;
 		return (
 			<div className="dateSBox clearfix">
 				<DateResult
 					time={this.state.time}
+					needTime={isShowTime}
 					func={this.formatTime}
 				/>
 				<DateYear
@@ -108,12 +110,10 @@ class DateSelector extends React.Component {
 					func={this.formatTime}
 					setTime={this.setTime.bind(this)}
 				/>
-				<DateTimeBox 
-					time={this.state.time}
-					showT={this.showT.bind(this)}	
-				/>
+				{dateTimeBox}
 				<ButtonGroup 
 					setTime={this.setTime.bind(this)} 
+					formatTime={this.formatTime}
 					time={this.state.time}	
 				/>
 				<YearSelectorBox 

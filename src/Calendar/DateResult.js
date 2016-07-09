@@ -14,24 +14,25 @@ class DateResult extends React.Component {
 	render(){
 		let time = this.props.time;
 		let {year,month,date,hours,minutes,seconds} = this.formatTime(time);
+		let isShowTime = this.props.needTime;
 		month = parseInt((month+1)/10)>0?(month+1):"0"+(month+1);
 		date = this.setTime(date);
 		hours = this.setTime(hours);
 		minutes = this.setTime(minutes);
 		seconds = this.setTime(seconds);
+		let showArr = [];
+		if(isShowTime){
+			let i=0;
+			showArr.push((<span key={i}>{hours}:</span>));
+			showArr.push((<span key={i+1}>{minutes}:</span>));
+			showArr.push((<span key={i+2}>{seconds}</span>));
+		}
 		return (
 			<div className="dateRBox">
-				<span>{year}</span>
-				-
-				<span>{month}</span>
-				-
-				<span>{date}</span>
-				&nbsp;
-				<span>{hours}</span>
-				:
-				<span>{minutes}</span>
-				:
-				<span>{seconds}</span>
+				<span>{year}-</span>
+				<span>{month}-</span>
+				<span>{date}&nbsp;</span>
+				{showArr}
 			</div>
 		);
 	}
