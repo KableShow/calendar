@@ -15,7 +15,7 @@ class DateArray extends React.Component {
 
 		let beforemonth = month === 0?11:month-1;
 		let aftermonth = month === 11?0:month+1;
-		time = new Date(year,month,1);
+		time = new Date(year,aftermonth,1);
 		let allDate = new Date(time.getTime() - 24*60*60*1000);
 		allDate = allDate.getDate(); //这个月有几天
 
